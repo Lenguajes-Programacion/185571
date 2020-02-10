@@ -12,17 +12,44 @@ namespace ProyeyctoDos
         {
             Console.Title = "MiniCalculadora";
             Console.WriteLine("Calculadora");
-            int v1 = 0, v2 = 0, R = 0;
-            Console.WriteLine("Eliga una opcion");
-            resp = Console.ReadLine(); 
-              
-            switch (args[1])
+            int v1, v2, r;
             {
                 case "+":
-                    Console.WriteLine("Eligío sumar");
-                    R = v1 + v2;
-                    Console.WriteLine("{0} + {1}= {2}", v1, v2, R); 
-                        break;
+                Console.WriteLine("Eligío sumar");
+                Console.WriteLine("Ingrese el primer número: ");
+                v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese el segundo número: ");
+                v2 = int.Parse(Console.ReadLine());
+                r = v1 + v2;
+                Console.WriteLine("El resultados es: " + r);
+                 break;
+                  case "-":
+                Console.WriteLine("Eligío restar");
+                Console.WriteLine("Ingrese el primer número: ");
+                v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese el segundo número: ");
+                v2 = int.Parse(Console.ReadLine());
+                r = v1 - v2;
+                Console.WriteLine("El resultados es: " + r);
+                break; 
+                  case "*":
+                Console.WriteLine("Eligío multiplicar");
+                Console.WriteLine("Ingrese el primer número: ");
+                v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese el segundo número: ");
+                v2 = int.Parse(Console.ReadLine());
+                r = v1 * v2;
+                Console.WriteLine("El resultados es: " + r);
+                break; 
+                 case "*":
+                Console.WriteLine("Eligío dividir");
+                Console.WriteLine("Ingrese el primer número: ");
+                v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese el segundo número: ");
+                v2 = int.Parse(Console.ReadLine());
+                r = v1 / v2;    
+                Console.WriteLine("El resultados es: " + r);
+                break; 
                 default:
                     Console.WriteLine("Los argumentos no cuentan con un operador valido" + args[1]);
                     break;
