@@ -13,6 +13,7 @@ namespace ProyeyctoDos
             Console.Title = "MiniCalculadora";
             Console.WriteLine("Calculadora");
             int v1, v2, r;
+            switch
             {
                 case "+":
                 Console.WriteLine("Eligío sumar");
