@@ -37,6 +37,7 @@ namespace Entrega1
         public static void check()
         {
             string usuario;
+            Console.WriteLine("Ingrese el nombre del usuario");
             usuario = Console.ReadLine();
             if (usuario.Length > 0 && usuario == nombre)
             {
