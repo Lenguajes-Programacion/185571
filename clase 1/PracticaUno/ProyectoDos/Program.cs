@@ -49,7 +49,7 @@ namespace ProyeyctoDos
                 v1 = int.Parse(Console.ReadLine());
                 Console.WriteLine("Ingrese el segundo número: ");
                 v2 = int.Parse(Console.ReadLine());
-                r = v1 /(v2);    
+                r = v1 /v2;    
                 Console.WriteLine("El resultados es: " + r);
                 break; 
                 default:
