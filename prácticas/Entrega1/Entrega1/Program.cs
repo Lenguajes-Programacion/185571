@@ -60,7 +60,7 @@ namespace Entrega1
             string opc;
             do
             {
-                Console.WriteLine("Eligue que operación realizar");
+                Console.WriteLine("Elige que operación realizar");
                 Console.WriteLine("(+)...Suma");
                 Console.WriteLine("(-)...Resta");
                 Console.WriteLine("(*)...Multiplicar");
@@ -107,7 +107,7 @@ namespace Entrega1
                         Console.WriteLine("El resultado es: " + r);
                         break;
                     case "*":
-                        Console.WriteLine("Eligioi multiplicar");
+                        Console.WriteLine("Eligió multiplicar");
                         Console.WriteLine("ingresa el primer numero");
                         v1 = int.Parse(Console.ReadLine());
                         Console.WriteLine("ingresa el segundo numero");
@@ -150,7 +150,7 @@ namespace Entrega1
             } while (salir == "si");
             if (salir == "no")
             {
-                Console.WriteLine("Eleguiste salir de la calculadora");
+                Console.WriteLine("Elegiste salir de la calculadora");
             }
             Console.ReadKey();
         }
