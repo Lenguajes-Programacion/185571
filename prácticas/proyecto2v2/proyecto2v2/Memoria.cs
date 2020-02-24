@@ -27,7 +27,12 @@ namespace proyecto2v2
     {
         public DateTime fecha;
         public string operacion;
-        public int resultado; 
-        public MemoriaData (DateTime date )
+        public int resultado;
+        public MemoriaData(DateTime date, String operation, int result)
+        {
+            fecha = date;
+            operecion = operation;
+            resultado = result; 
+        }
     }
 }
