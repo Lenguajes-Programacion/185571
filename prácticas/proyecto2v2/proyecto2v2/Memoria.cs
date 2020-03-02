@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generi<c;
 using System.IO; 
 using System.Text;
 
@@ -9,7 +9,7 @@ namespace proyecto2v2
     class Memoria
     {
         //Creamos una lista nativa para el manejo de la momeria 
-        public List<MemoriaData> db = new list<MemoriaData>();
+        public List<MemoriaData> db = new List<MemoriaData>();
         public Memoria()
         {
             //contructor de clase Memoria, para inicializar listas 
@@ -75,4 +75,4 @@ namespace proyecto2v2
             resultado = result; 
         }
     }
-}
+
