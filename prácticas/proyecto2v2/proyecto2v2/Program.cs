@@ -18,6 +18,7 @@ namespace proyecto2v2
                 Console.WriteLine("(-)...Resta");
                 Console.WriteLine("(*)...Multiplicar");
                 Console.WriteLine("(/)...Dividir");
+                Console.WriteLine("(m)... memoría"); 
                 opc = Console.ReadLine();
                 switch (opc)
                 {
@@ -38,7 +39,7 @@ namespace proyecto2v2
                         Console.WriteLine("ingresa el valor a sumar");
                         v1 = int.Parse(Console.ReadLine());
                         r = v1 + r;
-                        Console.WriteLine("el resultado es: "+ r);
+                        Console.WriteLine("el resultado es: " + r);
                         break;
                     case "-":
                         Console.WriteLine("Se eligió una resta");
@@ -57,7 +58,7 @@ namespace proyecto2v2
                         Console.WriteLine("ingresa el valor a restar");
                         v1 = int.Parse(Console.ReadLine());
                         r = v1 - r;
-                        Console.WriteLine("El resultado es: "+r);
+                        Console.WriteLine("El resultado es: " + r);
                         break;
                     case "*":
                         Console.WriteLine("Eligioi multiplicar");
@@ -66,7 +67,7 @@ namespace proyecto2v2
                         Console.WriteLine("ingresa el segundo numero");
                         v2 = int.Parse(Console.ReadLine());
                         r = v1 * v2;
-                        Console.WriteLine("El resultado es: "+ r);
+                        Console.WriteLine("El resultado es: " + r);
                         Console.WriteLine("¿Quiere utilizar el resultado anterior?");
                         resp = Console.ReadLine();
                         if (resp == "no")
@@ -75,11 +76,11 @@ namespace proyecto2v2
                         }
                         Console.WriteLine("ingresa el valor a multiplicar");
                         v1 = int.Parse(Console.ReadLine());
-                        r= v1 * r;
-                        Console.WriteLine("El resultado es: "+ r);
+                        r = v1 * r;
+                        Console.WriteLine("El resultado es: " + r);
                         break;
                     case "/":
-                        Console.WriteLine("Eligió dividir");  
+                        Console.WriteLine("Eligió dividir");
                         Console.WriteLine("ingresa el primer numero");
                         v1 = int.Parse(Console.ReadLine());
                         Console.WriteLine("ingresa el segundo numero");
@@ -95,7 +96,17 @@ namespace proyecto2v2
                         Console.WriteLine("ingresa el valor a dividir");
                         v1 = int.Parse(Console.ReadLine());
                         division = v1 / division;
-                        Console.WriteLine("El resultado es: "+division);
+                        Console.WriteLine("El resultado es: " + division);
+                        break;
+                    case "m":
+                        Console.WriteLine("Accediendo a Memoria \n");
+                        Console.WriteLine("-----------------\n");
+                        Memoria memoria = new Memoria();
+                        memoria.LeerMemoria();
+                        String key = Console.ReadLine();
+                         int resultado = memoria.GetMemoriaData(key);
+                        Console.WriteLine(resultado);
+                        memoria.GuardarMemoria();
                         break;
                 }
                 Console.WriteLine("¿Desea volver a usar la calculadora?(si)(no)");
@@ -109,3 +120,4 @@ namespace proyecto2v2
         }
     }
 }
+
