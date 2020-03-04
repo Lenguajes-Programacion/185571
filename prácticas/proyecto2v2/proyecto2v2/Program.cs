@@ -106,7 +106,6 @@ namespace proyecto2v2
                         String key = Console.ReadLine();
                          int resultado = memoria.GetMemoriaData(key);
                         Console.WriteLine(resultado);
-                        memoria.GuardarMemoria();
                         break;
                 }
                 Console.WriteLine("¿Desea volver a usar la calculadora?(si)(no)");

@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json; 
+using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generi<c;
+using System.Collections.Generic;
 using System.IO; 
 using System.Text;
 
@@ -10,6 +11,9 @@ namespace proyecto2v2
     {
         //Creamos una lista nativa para el manejo de la momeria 
         public List<MemoriaData> db = new List<MemoriaData>();
+
+        public IEnumerable<object> dbObject { get; private set; }
+
         public Memoria()
         {
             //contructor de clase Memoria, para inicializar listas 
@@ -21,12 +25,12 @@ namespace proyecto2v2
             string archivoDB = "../../../db.json"; //Es la ubicación del archivo
             StreamReader reader = new StreamReader(archivoDB); //es para que lea en tiempo real el archivo 
             var dbJSON = reader.ReadToEnd();
-            var dbObjet = JObject.parse(dbJSON);
+            var dbObjet = JObject.Parse(dbJSON);
             int i = 0; //Agregamos un contador 
-            foreach ((var key, var item) in dbObjet)
+            foreach (var item in dbObject)
             {
-                MemoriaData memoriaData = new MemoriaData(i, item.key.ToString(), item.Value["operacion"].toString(), item.value["resultado"].toString());
-                this.db.add(memoriaData);
+                MemoriaData memoriaData = new MemoriaData(item.Key.ToString(), item.Value["operacion"].ToString(), item.Value["resultado"].ToString());
+                this.db.Add(memoriaData);
                 Console.WriteLine("Dato en memoria: ({0})", i);
                 Console.BackgroundColor = ConsoleColor.Gray;
                 Console.WriteLine("{0} - {1}", memoriaData.fecha.ToLongDateString(), memoriaData.fecha.ToLongTimeString());
